@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nogawa Automation Backup プライバシーポリシー</title><meta name="description" content="Nogawa L.prince合同会社の社内バックアップツールの説明とデータの取り扱い"><style>body{margin:0;background:#f5f6f8;color:#202734;font-family:system-ui,-apple-system,sans-serif;line-height:1.85}main{max-width:760px;margin:48px auto;background:#fff;border:1px solid #dce0e6;border-radius:12px;padding:40px}h1{font-size:1.7rem;line-height:1.45;margin:0 0 32px}h2{font-size:1.18rem;margin-top:32px}a{color:#135aba}code{overflow-wrap:anywhere;background:#edf1f5;padding:2px 5px;border-radius:4px;font-size:.88em}hr{border:0;border-top:1px solid #dce0e6;margin:32px 0}footer{margin-top:40px;font-size:.85rem;color:#5b6573}@media(max-width:820px){main{margin:16px;padding:24px}h1{font-size:1.45rem}}</style></head><body><main><h1>Nogawa Automation Backup プライバシーポリシー</h1>
+<h2>1. 運営者と適用範囲</h2>
+<p>Nogawa L.prince合同会社が運営する社内バックアップツール「Nogawa Automation Backup」におけるデータの取り扱いを説明します。</p>
+<h2>2. 取り扱うデータと目的</h2>
+<p>本ツールは、Automationの監視記録と設定を暗号化してGoogle Driveに保存し、転送結果の照合、バックアップの世代管理、障害時の復元に使用します。</p>
+<p>Google Driveでは、専用フォルダとバックアップファイルの識別子、名前、作成日時、サイズなどのメタデータ、および暗号化されたファイル内容を扱います。OAuth認証で発行された認証トークンは、この連携を継続するために保存します。</p>
+<p>Googleへの認証はGoogleの画面で行います。本ツールがGoogleアカウントのパスワードを受け取ることはありません。</p>
+<h2>3. アクセス権限</h2>
+<p>要求するOAuth権限は <code>https://www.googleapis.com/auth/drive.file</code> です。このアプリが作成したファイル、または利用者が個別に許可したファイルについて、作成・閲覧・変更・削除が可能になります。</p>
+<p>本ツールは、専用フォルダと所定の名前形式を持つバックアップファイルを処理対象にします。専用フォルダへの限定はツールの設定によるもので、OAuth権限そのものが単一フォルダだけに限定されるわけではありません。</p>
+<h2>4. 保存と保護</h2>
+<p>バックアップは端末上で暗号化してからGoogle Driveへ転送します。復元用の秘密鍵は1Passwordで分離保管します。認証トークンと一時作業ファイルには、端末上のアクセス権限を設定します。</p>
+<p>監視用の認証トークン、通知用Webhookの秘密値、復元用の秘密鍵は、バックアップファイルに含めません。復元時は必要な認証情報を別途設定します。</p>
+<p>暗号化は内容の保護に用います。認証情報の漏えいによるバックアップファイルの削除や、秘密鍵の紛失による復元不能を防ぐものではありません。</p>
+<h2>5. 保存先と利用範囲</h2>
+<p>Google Driveは暗号化バックアップの保存・取得に、1Passwordは復元用秘密鍵の保管に利用します。バックアップ内容を広告配信、販売、LLMへの入力や学習のために利用する機能はありません。</p>
+<p>監視サービスへの接続ではバックアップ処理の稼働状況を通知します。バックアップの本文、認証トークン、復元鍵は通知内容に含めません。</p>
+<h2>6. 保持期間と削除</h2>
+<p>転送結果の照合に成功した後、最新30世代を保持し、古い対象バックアップをGoogle Driveのゴミ箱へ移します。手動実行などでも1世代が増えるため、30世代は30日間を意味しません。</p>
+<p>本ツールはGoogle Driveのゴミ箱を空にしません。ゴミ箱内のデータはGoogle Driveの保持・削除ルールに従います。</p>
+<p>管理者は自動実行を停止し、Googleアカウントの接続管理から本アプリのアクセス許可を取り消せます。許可の取り消しだけでは既存バックアップや端末上の認証設定は削除されないため、必要に応じてそれぞれ削除します。</p>
+<h2>7. 変更とお問い合わせ</h2>
+<p>取り扱うデータ、目的、アクセス範囲を変更する場合は、この説明を更新し、必要な同意を得たうえで変更を適用します。</p>
+<p>お問い合わせ: Nogawa L.prince合同会社 / nogawalprine@gmail.com</p>
+<hr>
+<p><a href="index.html">アプリの説明へ戻る</a></p><footer>Nogawa L.prince合同会社</footer></main></body></html>
